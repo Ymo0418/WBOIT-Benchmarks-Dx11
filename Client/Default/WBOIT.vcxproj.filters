@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="00.MainApp">
+      <UniqueIdentifier>{df0bb82b-57eb-493f-ba3c-0d57c0530f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Device">
+      <UniqueIdentifier>{e3581bf3-7b63-4c3d-bf75-1e03ff6c947f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Device\01.GraphicDevice">
+      <UniqueIdentifier>{5973e0b7-3d6f-4e86-b607-0c11e75f2aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Device\02.InputDevice">
+      <UniqueIdentifier>{ae516beb-c6c0-4964-8edd-b400bd353578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Timer">
+      <UniqueIdentifier>{fc80a4da-8338-4860-9381-197f0a30fbef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object">
+      <UniqueIdentifier>{c8b45f96-1dc2-4c78-b7c7-aa4aa619bbd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Component">
+      <UniqueIdentifier>{abbfad99-566d-47ff-b62a-aa0c6f85b502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Default">
+      <UniqueIdentifier>{ce7b68a3-af27-4968-9e1f-dcd855be0cd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98.Defines">
+      <UniqueIdentifier>{ae4114f9-d00c-4ff5-b48f-7758e75589c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Base">
+      <UniqueIdentifier>{31e51a56-2721-42c3-8057-3d58211160e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.ImGUI">
+      <UniqueIdentifier>{22f6f375-0b4a-480d-80a2-e9241c8e9705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="95.ShaderFiles">
+      <UniqueIdentifier>{e92be1ce-2045-45c6-bc8c-1048886909c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\01.Camera">
+      <UniqueIdentifier>{ecb921b7-4faf-4992-81f7-3e4a097d2e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\99.ImGUI">
+      <UniqueIdentifier>{173de6bb-56f9-4b3e-a777-46718ff8cf2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Device\03.Renderer">
+      <UniqueIdentifier>{4271a0e0-fd54-402e-af6e-518ad2beabf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Component\01. Shader">
+      <UniqueIdentifier>{5c7af456-92dc-4673-ad75-346f99c9a52e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Component\02. Buffer">
+      <UniqueIdentifier>{891330d5-7798-4a4d-92de-7c44270708bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.RenderTarget">
+      <UniqueIdentifier>{bd3eae5b-bf99-46b9-9c2c-fead0d103c34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Level">
+      <UniqueIdentifier>{2fc737f9-912e-4a20-98bd-2aac0db1f6b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Level\99.Default">
+      <UniqueIdentifier>{73971291-0a6b-4139-861b-bd7870e5ec7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Level\01.Level_WBOIT">
+      <UniqueIdentifier>{f6006c67-706a-4eaa-8cd8-d24f3c21e0c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\00.Default">
+      <UniqueIdentifier>{713eca52-ece7-4fa3-8685-f31e5ba95e63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\02.Plane">
+      <UniqueIdentifier>{cfa57004-8a3b-4892-a44f-af524bfc8f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Object\02.Plane\01.Plane_Sort">
+      <UniqueIdentifier>{f993a8ba-ca1c-44b7-b4ff-d1d0c532121f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>97.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>97.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>97.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="WBOIT.h">
+      <Filter>97.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBase.h">
+      <Filter>99.Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CGraphic_Device.h">
+      <Filter>01.Device\01.GraphicDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CInput_Device.h">
+      <Filter>01.Device\02.InputDevice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CMainApp.h">
+      <Filter>00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CTimer.h">
+      <Filter>02.Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Defines.h">
+      <Filter>98.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Function.h">
+      <Filter>98.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Macro.h">
+      <Filter>98.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Typedef.h">
+      <Filter>98.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\Struct.h">
+      <Filter>98.Defines</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui.h">
+      <Filter>96.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.h">
+      <Filter>96.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.h">
+      <Filter>96.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.h">
+      <Filter>96.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_internal.h">
+      <Filter>96.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CCamera.h">
+      <Filter>03.Object\01.Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CImGUI.h">
+      <Filter>03.Object\99.ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CRenderer.h">
+      <Filter>01.Device\03.Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CShader.h">
+      <Filter>04.Component\01. Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer.h">
+      <Filter>04.Component\02. Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CBuffer_Rect.h">
+      <Filter>04.Component\02. Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CRenderTarget.h">
+      <Filter>05.RenderTarget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CLevel.h">
+      <Filter>06.Level\99.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CLevel_WBOIT.h">
+      <Filter>06.Level\01.Level_WBOIT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CObject.h">
+      <Filter>03.Object\00.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CPlane.h">
+      <Filter>03.Object\02.Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Public\CPlane_CPU_Sort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>97.Default</Filter>
+    </Image>
+    <Image Include="WBOIT.ico">
+      <Filter>97.Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WBOIT.cpp">
+      <Filter>97.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBase.cpp">
+      <Filter>99.Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CGraphic_Device.cpp">
+      <Filter>01.Device\01.GraphicDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CInput_Device.cpp">
+      <Filter>01.Device\02.InputDevice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CMainApp.cpp">
+      <Filter>00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CTimer.cpp">
+      <Filter>02.Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\Struct.cpp">
+      <Filter>98.Defines</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_draw.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_tables.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_widgets.cpp">
+      <Filter>96.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CCamera.cpp">
+      <Filter>03.Object\01.Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CImGUI.cpp">
+      <Filter>03.Object\99.ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CRenderer.cpp">
+      <Filter>01.Device\03.Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CShader.cpp">
+      <Filter>04.Component\01. Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer.cpp">
+      <Filter>04.Component\02. Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CBuffer_Rect.cpp">
+      <Filter>04.Component\02. Buffer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CRenderTarget.cpp">
+      <Filter>05.RenderTarget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CLevel.cpp">
+      <Filter>06.Level\99.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CLevel_WBOIT.cpp">
+      <Filter>06.Level\01.Level_WBOIT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CObject.cpp">
+      <Filter>03.Object\00.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CPlane.cpp">
+      <Filter>03.Object\02.Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Private\CPlane_CPU_Sort.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WBOIT.rc">
+      <Filter>97.Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\ShaderFiles\CS_ParticleGlobal.hlsli">
+      <Filter>95.ShaderFiles</Filter>
+    </None>
+    <None Include="..\ShaderFiles\Shader_Defines.hlsli">
+      <Filter>95.ShaderFiles</Filter>
+    </None>
+    <None Include="..\..\SDK\Inc\ImGUI\imgui.natstepfilter">
+      <Filter>96.ImGUI</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\ShaderFiles\CS_Reset.hlsl">
+      <Filter>95.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\ShaderFiles\CS_Update.hlsl">
+      <Filter>95.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\ShaderFiles\Shader_CPU.hlsl">
+      <Filter>95.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\ShaderFiles\Shader_GPU.hlsl">
+      <Filter>95.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\ShaderFiles\CS_Emit.hlsl">
+      <Filter>95.ShaderFiles</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\SDK\Inc\ImGUI\imgui.natvis">
+      <Filter>96.ImGUI</Filter>
+    </Natvis>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui.h" />
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.h" />
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.h" />
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_internal.h" />
+    <ClInclude Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.h" />
+    <ClInclude Include="..\Public\CBase.h" />
+    <ClInclude Include="..\Public\CBuffer.h" />
+    <ClInclude Include="..\Public\CBuffer_Rect.h" />
+    <ClInclude Include="..\Public\CCamera.h" />
+    <ClInclude Include="..\Public\CGraphic_Device.h" />
+    <ClInclude Include="..\Public\CImGUI.h" />
+    <ClInclude Include="..\Public\CInput_Device.h" />
+    <ClInclude Include="..\Public\CLevel.h" />
+    <ClInclude Include="..\Public\CLevel_WBOIT.h" />
+    <ClInclude Include="..\Public\CMainApp.h" />
+    <ClInclude Include="..\Public\CObject.h" />
+    <ClInclude Include="..\Public\CPlane.h" />
+    <ClInclude Include="..\Public\CPlane_CPU_Sort.h" />
+    <ClInclude Include="..\Public\CRenderer.h" />
+    <ClInclude Include="..\Public\CRenderTarget.h" />
+    <ClInclude Include="..\Public\CShader.h" />
+    <ClInclude Include="..\Public\CTimer.h" />
+    <ClInclude Include="..\Public\Defines.h" />
+    <ClInclude Include="..\Public\Function.h" />
+    <ClInclude Include="..\Public\Macro.h" />
+    <ClInclude Include="..\Public\Struct.h" />
+    <ClInclude Include="..\Public\Typedef.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WBOIT.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico" />
+    <Image Include="WBOIT.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_stdlib.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_tables.cpp" />
+    <ClCompile Include="..\..\SDK\Inc\ImGUI\imgui_widgets.cpp" />
+    <ClCompile Include="..\Private\CBase.cpp" />
+    <ClCompile Include="..\Private\CBuffer.cpp" />
+    <ClCompile Include="..\Private\CBuffer_Rect.cpp" />
+    <ClCompile Include="..\Private\CCamera.cpp" />
+    <ClCompile Include="..\Private\CGraphic_Device.cpp" />
+    <ClCompile Include="..\Private\CImGUI.cpp" />
+    <ClCompile Include="..\Private\CInput_Device.cpp" />
+    <ClCompile Include="..\Private\CLevel.cpp" />
+    <ClCompile Include="..\Private\CLevel_WBOIT.cpp" />
+    <ClCompile Include="..\Private\CMainApp.cpp" />
+    <ClCompile Include="..\Private\CObject.cpp" />
+    <ClCompile Include="..\Private\CPlane.cpp" />
+    <ClCompile Include="..\Private\CPlane_CPU_Sort.cpp" />
+    <ClCompile Include="..\Private\CRenderer.cpp" />
+    <ClCompile Include="..\Private\CRenderTarget.cpp" />
+    <ClCompile Include="..\Private\CShader.cpp" />
+    <ClCompile Include="..\Private\CTimer.cpp" />
+    <ClCompile Include="..\Private\Struct.cpp" />
+    <ClCompile Include="WBOIT.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WBOIT.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\SDK\Inc\ImGUI\imgui.natstepfilter" />
+    <None Include="..\ShaderFiles\CS_ParticleGlobal.hlsli" />
+    <None Include="..\ShaderFiles\Shader_Defines.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\ShaderFiles\CS_Emit.hlsl" />
+    <FxCompile Include="..\ShaderFiles\CS_Reset.hlsl" />
+    <FxCompile Include="..\ShaderFiles\CS_Update.hlsl" />
+    <FxCompile Include="..\ShaderFiles\Shader_CPU.hlsl" />
+    <FxCompile Include="..\ShaderFiles\Shader_GPU.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="..\..\SDK\Inc\ImGUI\imgui.natvis" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d68ea417-5ab9-48f2-8bc4-69ac10ecc1fa}</ProjectGuid>
+    <RootNamespace>WBOIT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>../Bin/</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowSDK_IncludePath);../Default</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../Public;../../SDK/Inc;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../SDK/Lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;DirectXTKD.lib;Effects11d.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;DirectXTK.lib;Effects11.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
