@@ -9,7 +9,7 @@ public:
     virtual HRESULT Initialize();
     virtual void    Update(float fTimeDelta);
     virtual void    Late_Update(float fTimeDelta);
-    virtual HRESULT Render();
+    virtual HRESULT Render() = 0;
 	bool            Get_Dead() { return m_isDead; }
 
 protected:

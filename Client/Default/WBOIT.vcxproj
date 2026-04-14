@@ -27,6 +27,7 @@
     <ClInclude Include="..\Public\CBase.h" />
     <ClInclude Include="..\Public\CBuffer.h" />
     <ClInclude Include="..\Public\CBuffer_Rect.h" />
+    <ClInclude Include="..\Public\CBuffer_SortCPU.h" />
     <ClInclude Include="..\Public\CCamera.h" />
     <ClInclude Include="..\Public\CGraphic_Device.h" />
     <ClInclude Include="..\Public\CImGUI.h" />
@@ -37,6 +38,7 @@
     <ClInclude Include="..\Public\CObject.h" />
     <ClInclude Include="..\Public\CPlane.h" />
     <ClInclude Include="..\Public\CPlane_CPU_Sort.h" />
+    <ClInclude Include="..\Public\CPlane_WBOIT.h" />
     <ClInclude Include="..\Public\CRenderer.h" />
     <ClInclude Include="..\Public\CRenderTarget.h" />
     <ClInclude Include="..\Public\CShader.h" />
@@ -66,6 +68,7 @@
     <ClCompile Include="..\Private\CBase.cpp" />
     <ClCompile Include="..\Private\CBuffer.cpp" />
     <ClCompile Include="..\Private\CBuffer_Rect.cpp" />
+    <ClCompile Include="..\Private\CBuffer_SortCPU.cpp" />
     <ClCompile Include="..\Private\CCamera.cpp" />
     <ClCompile Include="..\Private\CGraphic_Device.cpp" />
     <ClCompile Include="..\Private\CImGUI.cpp" />
@@ -76,6 +79,7 @@
     <ClCompile Include="..\Private\CObject.cpp" />
     <ClCompile Include="..\Private\CPlane.cpp" />
     <ClCompile Include="..\Private\CPlane_CPU_Sort.cpp" />
+    <ClCompile Include="..\Private\CPlane_WBOIT.cpp" />
     <ClCompile Include="..\Private\CRenderer.cpp" />
     <ClCompile Include="..\Private\CRenderTarget.cpp" />
     <ClCompile Include="..\Private\CShader.cpp" />

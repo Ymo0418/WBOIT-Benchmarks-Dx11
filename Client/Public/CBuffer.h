@@ -12,15 +12,13 @@ protected:
 public:
     virtual HRESULT Initialize() = 0;
     virtual void    Update(float _fTimeDelta) = 0;
-    virtual HRESULT Render();
-    virtual HRESULT Bind_Buffers();
+    virtual HRESULT Render() = 0;
 
 protected:
     HRESULT Create_Buffer(ID3D11Buffer** _ppOut);
 
 protected:
     ID3D11Buffer*           m_pVB               = { nullptr };
-    ID3D11Buffer*           m_pIB               = { nullptr };
 
     D3D11_BUFFER_DESC       m_tBufferDesc       = {};
     D3D11_SUBRESOURCE_DATA  m_tInitialData      = {};
@@ -29,11 +27,6 @@ protected:
     uint                    m_iNumVertex        = { 0 };
     uint                    m_iNumVertexBuffer  = { 0 };
 
-    uint                    m_iIndexStride      = { 0 };
-    uint                    m_iNumIndex         = { 0 };
-
-
-    DXGI_FORMAT             m_eIndexFormat          = {};
     D3D_PRIMITIVE_TOPOLOGY  m_ePrimitiveTopology    = {};
 
     ID3D11Device*           m_pDevice               = { nullptr };

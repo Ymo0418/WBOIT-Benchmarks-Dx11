@@ -58,6 +58,7 @@ void CMainApp::Render(CTimer* _pTimer)
 
 void CMainApp::Render_Objects()
 {
+	m_pRenderer->Render();
 }
 
 void CMainApp::Render_UI()
@@ -125,7 +126,9 @@ void CMainApp::Free()
 	ImGui_ImplDX11_Shutdown();
 	ImGui_ImplWin32_Shutdown();
 	ImGui::DestroyContext();
-		
+	
+	Safe_Release(m_pCurLevel);
+
 	CCamera::DestroyInstance();
 	CInput_Device::DestroyInstance();
 	CRenderer::DestroyInstance();

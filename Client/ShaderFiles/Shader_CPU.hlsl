@@ -8,22 +8,22 @@ cbuffer PerFrameInfo : register(b0)
 
 struct VS_IN
 {
-    float4 vColor       : COLOR0;
     float3 vWorldPos    : TEXCOORD0;
+    float4 vColor       : COLOR0;
 };
 
 struct VS_OUT
 {
-    float4 vColor       : COLOR0;
     float3 vWorldPos    : TEXCOORD0;
+    float4 vColor       : COLOR0;
 };
 
 VS_OUT VS_MAIN(VS_IN In)
 {
     VS_OUT Out = (VS_OUT) 0;
     
-    Out.vColor = In.vColor;
     Out.vWorldPos = In.vWorldPos;
+    Out.vColor = In.vColor;
     
     return Out;
 }
@@ -38,10 +38,11 @@ struct GS_OUT
 void GS_MAIN(point VS_OUT In[1], inout TriangleStream<GS_OUT> Triangles)
 {    
     GS_OUT Out[4];
-    Out[0].vPosition = float4(In[0].vWorldPos + float3( 5f,  5f, 0f), 1f);
-    Out[1].vPosition = float4(In[0].vWorldPos + float3(-5f,  5f, 0f), 1f);
-    Out[2].vPosition = float4(In[0].vWorldPos + float3(-5f, -5f, 0f), 1f);
-    Out[3].vPosition = float4(In[0].vWorldPos + float3( 5f, -5f, 0f), 1f);
+    float size = 10.0f;
+    Out[0].vPosition = float4(In[0].vWorldPos + float3( size,  size, 0.0f), 1.0f);
+    Out[1].vPosition = float4(In[0].vWorldPos + float3(-size,  size, 0.0f), 1.0f);
+    Out[2].vPosition = float4(In[0].vWorldPos + float3(-size, -size, 0.0f), 1.0f);
+    Out[3].vPosition = float4(In[0].vWorldPos + float3( size, -size, 0.0f), 1.0f);
     
     [unroll]
     for (uint i = 0; i < 4; ++i)
@@ -91,7 +92,7 @@ technique11 DefaultTechnique
     {
         SetRasterizerState(RS_NonCull);
         SetDepthStencilState(DSS_NOWRITE, 0);
-        SetBlendState(BS_Default, float4(0.f, 0.f, 0.f, 0.f), 0xffffffff);
+        SetBlendState(BS_AlphaBlend, float4(0.f, 0.f, 0.f, 0.f), 0xffffffff);
         VertexShader = compile vs_5_0 VS_MAIN();
         GeometryShader = compile gs_5_0 GS_MAIN();
         PixelShader = compile ps_5_0 PS_MAIN();

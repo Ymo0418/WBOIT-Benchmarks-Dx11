@@ -1,7 +1,7 @@
 #include "CBuffer_Rect.h"
 
-CBuffer_Rect::CBuffer_Rect(ID3D11Device* pDevice, ID3D11DeviceContext* pContext)
-    : CBuffer{ pDevice , pContext }
+CBuffer_Rect::CBuffer_Rect(ID3D11Device* _pDevice, ID3D11DeviceContext* _pContext)
+    : CBuffer{ _pDevice , _pContext }
 {
 }
 
@@ -23,21 +23,12 @@ HRESULT CBuffer_Rect::Initialize()
 		return E_FAIL;
 	}
 
-	if (FAILED(Reday_IndexBuffer()))
+	if (FAILED(Ready_IndexBuffer()))
 	{
 		MSG_BOX("Failed : Reday_IndexBuffer");
 		return E_FAIL;
 	}
 
-	return S_OK;
-}
-
-void CBuffer_Rect::Update(float _fTimeDelta)
-{
-}
-
-HRESULT CBuffer_Rect::Render()
-{
 	return S_OK;
 }
 
@@ -82,7 +73,7 @@ HRESULT CBuffer_Rect::Ready_VertexBuffer()
 	return S_OK;
 }
 
-HRESULT CBuffer_Rect::Reday_IndexBuffer()
+HRESULT CBuffer_Rect::Ready_IndexBuffer()
 {
 	ZeroMemory(&m_tBufferDesc, sizeof(m_tBufferDesc));
 
@@ -116,6 +107,46 @@ HRESULT CBuffer_Rect::Reday_IndexBuffer()
 	return S_OK;
 }
 
+HRESULT CBuffer_Rect::Bind_Buffers()
+{
+	if (!m_pContext)
+	{
+		MSG_BOX("Failed : Bind_Buffers _ m_pContext");
+		return E_FAIL;
+	}
+
+	ID3D11Buffer* pVBs[] = {
+		m_pVB,
+	};
+
+	uint pVertexStrides[] = {
+		m_iVertexStride,
+	};
+
+	uint pOffsets[] = {
+		0,
+	};
+
+	m_pContext->IASetVertexBuffers(0, m_iNumVertexBuffer, pVBs, pVertexStrides, pOffsets);
+	m_pContext->IASetIndexBuffer(m_pIB, m_eIndexFormat, 0);
+	m_pContext->IASetPrimitiveTopology(m_ePrimitiveTopology);
+
+	return S_OK;
+}
+
+HRESULT CBuffer_Rect::Render()
+{
+	if (!m_pContext)
+	{
+		MSG_BOX("Failed : Render _ m_pContext");
+		return E_FAIL;
+	}
+
+	m_pContext->DrawIndexed(m_iNumIndex, 0, 0);
+
+	return S_OK;
+}
+
 CBuffer_Rect* CBuffer_Rect::Create(ID3D11Device* _pDevice, ID3D11DeviceContext* _pContext)
 {
 	CBuffer_Rect* pInstance = new CBuffer_Rect(_pDevice, _pContext);
@@ -132,4 +163,6 @@ CBuffer_Rect* CBuffer_Rect::Create(ID3D11Device* _pDevice, ID3D11DeviceContext* 
 void CBuffer_Rect::Free()
 {
 	__super::Free();
+
+	Safe_Release(m_pIB);
 }

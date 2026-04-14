@@ -2,7 +2,7 @@
 
 HRESULT CObject::Initialize()
 {
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 void CObject::Update(float fTimeDelta)
